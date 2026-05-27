@@ -3,8 +3,8 @@ package com.project.lumina.client.game.module.impl.misc
 import com.project.lumina.client.constructors.CheatCategory
 import com.project.lumina.client.constructors.Element
 import com.project.lumina.client.game.InterceptablePacket
-import com.project.lumina.client.game.module.api.setting.intValue
 import com.project.lumina.client.game.module.api.setting.stringValue
+import com.project.lumina.client.game.module.api.setting.intValue
 import com.project.lumina.client.util.AssetManager
 import kotlinx.coroutines.*
 import org.cloudburstmc.protocol.bedrock.packet.PlayerAuthInputPacket
@@ -21,23 +21,21 @@ class DesyncElement(
 ) {
 
     private val packetQueue = ConcurrentLinkedQueue<PlayerAuthInputPacket>()
-
     private val scope = CoroutineScope(SupervisorJob() + Dispatchers.Default)
 
     private var flushingJob: Job? = null
     private var desynced = false
 
     private var mode by stringValue(
-        this,
         "Mode",
         "Jitter",
-        listOf("Jitter", "Freeze", "Pulse")
+        listOf("Jitter", "Freeze", "Pulse").toSet()
     )
 
-    private var maxQueue by intValue(this, "MaxQueue", 120, 20..400)
-    private var minDelay by intValue(this, "MinDelay", 35, 0..500)
-    private var maxDelay by intValue(this, "MaxDelay", 90, 0..1000)
-    private var burstSize by intValue(this, "Burst", 6, 1..20)
+    private var maxQueue by intValue("MaxQueue", 120, 20..400)
+    private var minDelay by intValue("MinDelay", 35, 0..500)
+    private var maxDelay by intValue("MaxDelay", 90, 0..1000)
+    private var burstSize by intValue("Burst", 6, 1..20)
 
     override fun onEnabled() {
         super.onEnabled()

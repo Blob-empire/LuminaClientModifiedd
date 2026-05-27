@@ -29,7 +29,7 @@ class DesyncElement(
     private var mode by stringValue(
         "Mode",
         "Jitter",
-        listOf("Jitter", "Freeze", "Pulse").toSet()
+        listOf("Jitter", "Freeze", "Pulse")
     )
 
     private var maxQueue by intValue("MaxQueue", 120, 20..400)
@@ -154,3 +154,4 @@ class DesyncElement(
         }
     }
 }
+

@@ -63,6 +63,7 @@ import com.project.lumina.client.game.module.impl.motion.SpiderElement
 import com.project.lumina.client.game.module.impl.motion.StepElement
 import com.project.lumina.client.game.module.impl.visual.AntiBlindElement
 import com.project.lumina.client.game.module.impl.visual.ESPElement
+import com.project.lumina.client.game.module.impl.visual.BlockFinderElement
 import com.project.lumina.client.game.module.impl.visual.FreeCameraElement
 import com.project.lumina.client.game.module.impl.visual.FullBrightElement
 import com.project.lumina.client.game.module.impl.visual.NameTagElement
@@ -162,6 +163,7 @@ object GameManager {
                 add(KeyStrokes())
                 add(TargetHud())
                 add(NameTagElement())
+                add(BlockFinderElement())
                 add(AntiBlindElement())
                 add(ESPElement())
                 add(EntityRadarElement())

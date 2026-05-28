@@ -230,6 +230,8 @@
     <string name="module_entity_radar_display_name">Entitity radar</string>
     <string name="module_spam_xp_display_name">SpamXP</string>
     <string name="module_auto_xp_display_name">AutoXP</string>
+    <string name="module_block_finder_display_name">BlockFinder</string>
+
     <!-- Config Module Strings -->
     <string name="module_config_manager">Config Manager</string>
     <string name="save_config">Save Config</string>

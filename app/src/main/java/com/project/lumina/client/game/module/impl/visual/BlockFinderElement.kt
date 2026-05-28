@@ -30,7 +30,7 @@ import kotlin.math.cos
 import kotlin.math.sin
 
 class BlockFinderElement(
-    iconResId: Int = AssetManager.getAsset("ic_module_block_finder")
+    iconResId: Int = AssetManager.getAsset("ic_brand_finder")
 ) : Element(
     name = "BlockFinder",
     category = CheatCategory.Visual,
